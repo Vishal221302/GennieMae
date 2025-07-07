@@ -1,0 +1,3216 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+    font-family: "Gotham-Book";
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://anima-uploads.s3.amazonaws.com/projects/6546a6a8e6cfe31c46f5ccea/fonts/gotham-book.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham-Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://anima-uploads.s3.amazonaws.com/projects/65410c35416ace0412c89137/fonts/gotham-bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham-Medium";
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://anima-uploads.s3.amazonaws.com/projects/624afd97dbf85b221b75484d/fonts/gotham-medium.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Gotham-Black";
+    font-style: normal;
+    font-weight: 900;
+    src: url('https://anima-uploads.s3.amazonaws.com/5b972532993a91000b94cc94/Gotham-Black.otf') format("opentype");
+}
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/685c20a8a0fe16b6ce575a6d.685c20a8a0fe16b6ce575a70.n3RnMzy.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+    outline: none;
+}
+
+.screen * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.screen div {
+    -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+    display: contents;
+    pointer-events: auto;
+    text-decoration: none;
+}
+
+.component-wrapper * {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+    pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+    visibility: hidden !important;
+}
+
+.screen a {
+    display: contents;
+    text-decoration: none;
+}
+
+.full-width-a {
+    width: 100%;
+}
+
+.full-height-a {
+    height: 100%;
+}
+
+.container-center-vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    pointer-events: none;
+}
+
+.container-center-vertical>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.container-center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    pointer-events: none;
+    width: 100%;
+}
+
+.container-center-horizontal>* {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+.auto-animated div {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated input {
+    --z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+    opacity: 1;
+}
+
+.overlay-base {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.overlay-base.animate-appear {
+    align-items: center;
+    animation: reveal 0.3s ease-in-out 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+    display: block;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+    pointer-events: none;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.animate-nodelay {
+    animation-delay: 0s;
+}
+
+.align-self-flex-start {
+    align-self: flex-start;
+}
+
+.align-self-flex-end {
+    align-self: flex-end;
+}
+
+.align-self-flex-center {
+    align-self: flex-center;
+}
+
+.valign-text-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.valign-text-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+    pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --bunting: #0d204a;
+    --dove-gray: #707070;
+    --finn: #6c1e58;
+    --finn-2: #6a1c56;
+    --midnight-blue: #012d6b;
+    --mine-shaft: #323232;
+    --peridot: #a2af39;
+    --peridot-2: #a3b039;
+    --peridot-3: #a1ae39;
+    --white: #ffffff;
+
+    --font-size-l: 13px;
+    --font-size-m: 12px;
+    --font-size-s: 11px;
+    --font-size-xl: 14px;
+    --font-size-xs: 10px;
+    --font-size-xxl: 22px;
+    --font-size-xxs: 9px;
+
+    --font-family-gotham: "Gotham", Helvetica;
+    --font-family-gotham-black: "Gotham-Black", Helvetica;
+    --font-family-gotham-bold: "Gotham-Bold", Helvetica;
+    --font-family-gotham-book: "Gotham-Book", Helvetica;
+    --font-family-gotham-medium: "Gotham-Medium", Helvetica;
+}
+
+.gotham-medium-mine-shaft-20px {
+    color: var(--mine-shaft);
+    font-family: var(--font-family-gotham-medium);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.gotham-book-normal-black-11px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-book-normal-midnight-blue-12px {
+    color: var(--midnight-blue);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-book-normal-white-10px {
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-book-normal-black-12px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-book-normal-black-13px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-bold-black-12px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-bold);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.gotham-medium-black-27px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-medium);
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.gotham-medium-black-10px {
+    color: var(--black);
+    font-family: var(--font-family-gotham-medium);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.gotham-book-normal-white-12px {
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.gotham-medium-dove-gray-7px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-gotham-medium);
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+:root {}
+
+
+/* screen - gm-hifi-homepage-1 */
+
+.gm-hifi-homepage-1 {
+    background-color: var(--white);
+    height: 2149px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .rectangle-54-pRNdk4 {
+    background-color: var(--bunting);
+    height: 262px;
+    left: 0px;
+    position: absolute;
+    top: 1891px;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .group-24-pRNdk4 {
+    background-color: transparent;
+    height: 126px;
+    left: 0px;
+    opacity: 0.38;
+    position: absolute;
+    top: 2027px;
+    width: 230px;
+}
+
+.gm-hifi-homepage-1 .group-21-Yuxunb {
+    bottom: calc(37.67% - 16px);
+    height: 42px;
+    left: calc(22.04% - 9px);
+    width: 42px;
+}
+
+.gm-hifi-homepage-1 .group-20-3u6GQ3 {
+    top: 1px;
+}
+
+.gm-hifi-homepage-1 .group-26-pRNdk4 {
+    background-color: transparent;
+    height: 73px;
+    left: 564px;
+    opacity: 0.39;
+    position: absolute;
+    top: 2062px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .group-28-pRNdk4 {
+    background-color: transparent;
+    height: 45px;
+    left: 435px;
+    opacity: 0.68;
+    position: absolute;
+    top: 2058px;
+    width: 102px;
+}
+
+.gm-hifi-homepage-1 .group-27-W7IwxF {
+    left: 1px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .rectangle-179-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--peridot-2);
+    height: 30px;
+    left: 45px;
+    position: absolute;
+    top: 1943px;
+    width: 216px;
+}
+
+.gm-hifi-homepage-1 .enter-your-email-pRNdk4 {
+    background-color: transparent;
+    color: #929292;
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    left: 58px;
+    letter-spacing: 0.00px;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 1951px;
+    width: 166px;
+}
+
+.gm-hifi-homepage-1 .subscribe-to-our-newsletter-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 45px;
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    top: 1920px;
+    width: 264px;
+}
+
+.gm-hifi-homepage-1 .already-a-subscriber-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham);
+    font-size: var(--font-size-xs);
+    font-weight: 400;
+    height: auto;
+    left: 45px;
+    letter-spacing: 0.00px;
+    line-height: 10px;
+    position: absolute;
+    text-align: left;
+    top: 2000px;
+    width: 295px;
+}
+
+.gm-hifi-homepage-1 .span0-0QgdxC {}
+
+.gm-hifi-homepage-1 .span1-0QgdxC {
+    font-family: var(--font-family-gotham-bold);
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.gm-hifi-homepage-1 .span2-0QgdxC {}
+
+.gm-hifi-homepage-1 .contact-usfaqglossarysitemap-pRNdk4 {
+    background-color: transparent;
+    height: 81px;
+    left: 309px;
+    letter-spacing: 0.00px;
+    line-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    top: 1919px;
+    width: 74px;
+}
+
+.gm-hifi-homepage-1 .site-policies-discla-pRNdk4 {
+    background-color: transparent;
+    height: 75px;
+    left: 405px;
+    letter-spacing: 0.00px;
+    line-height: 20px;
+    position: absolute;
+    text-align: left;
+    top: 1919px;
+    width: 158px;
+}
+
+.gm-hifi-homepage-1 .get-connected-pRNdk4 {
+    background-color: transparent;
+    color: var(--peridot-2);
+    font-family: var(--font-family-gotham);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    height: auto;
+    left: 614px;
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    top: 1928px;
+    width: 264px;
+}
+
+.gm-hifi-homepage-1 .span0-la1aJS {
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .span1-la1aJS {
+    font-family: var(--font-family-gotham-bold);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .image-26-pRNdk4 {
+    background-color: transparent;
+    height: 22px;
+    left: 610px;
+    object-fit: cover;
+    position: absolute;
+    top: 1957px;
+    width: 127px;
+}
+
+.gm-hifi-homepage-1 .copyright-2025-ginni-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+    font-weight: 400;
+    height: 19px;
+    left: 289px;
+    letter-spacing: 0.00px;
+    line-height: 9px;
+    position: absolute;
+    text-align: left;
+    top: 2127px;
+    width: 234px;
+}
+
+.gm-hifi-homepage-1 .group-86-pRNdk4 {
+    background-color: transparent;
+    height: 32px;
+    left: 22px;
+    position: absolute;
+    top: 117px;
+    width: 772px;
+}
+
+.gm-hifi-homepage-1 .image-2-rNuJ2d {
+    background-color: transparent;
+    height: 100%;
+    left: 17px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 451px;
+}
+
+.gm-hifi-homepage-1 .investors-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    width: 97px;
+}
+
+.gm-hifi-homepage-1 .issuers-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    left: calc(18.57% - 18px);
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    width: 97px;
+}
+
+.gm-hifi-homepage-1 .disclosure-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    left: calc(35.09% - 43px);
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    text-align: left;
+    width: 123px;
+}
+
+.gm-hifi-homepage-1 .participate-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    right: calc(44.05% - 54px);
+    text-align: left;
+    width: 123px;
+}
+
+.gm-hifi-homepage-1 .newsroom-rNuJ2d {
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    line-height: 12px;
+    right: calc(21.02% - 26px);
+    width: 123px;
+}
+
+.gm-hifi-homepage-1 .about-us-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(33.33% - 6px);
+    height: 17px;
+    letter-spacing: 0.00px;
+    line-height: 12px;
+    position: absolute;
+    right: -2px;
+    text-align: left;
+    width: 123px;
+}
+
+.gm-hifi-homepage-1 .group-29-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    left: 80px;
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-OuOaKh {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .group-30-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    left: calc(24.37% - 1px);
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-xnKJm6 {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .group-31-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    left: calc(41.72% - 2px);
+    position: absolute;
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-RJtabx {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .group-32-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    position: absolute;
+    right: calc(40.80% - 2px);
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-jmkcBt {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .group-33-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    position: absolute;
+    right: calc(21.49% - 1px);
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-vMAvPU {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .group-34-rNuJ2d {
+    background-color: transparent;
+    bottom: calc(38.67% - 4px);
+    height: 10px;
+    position: absolute;
+    right: 42px;
+    transform: rotate(-90deg);
+    width: 6px;
+}
+
+.gm-hifi-homepage-1 .group-14-udcypx {
+    height: calc(100.00% - 4px);
+    left: -2px;
+    top: 2px;
+    transform: rotate(90deg);
+    width: calc(100.00% + 4px);
+}
+
+.gm-hifi-homepage-1 .rectangle-183-pRNdk4 {
+    background: linear-gradient(179.66deg, #ffffff 30.38%, #d4eaf6 76.33%);
+    background-color: transparent;
+    height: 784px;
+    left: 1px;
+    position: absolute;
+    top: 306px;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .group-42-pRNdk4 {
+    background-color: transparent;
+    height: 90px;
+    left: -37px;
+    opacity: 0.38;
+    position: absolute;
+    top: 980px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .group-21-Tf4lRP {
+    bottom: calc(37.66% - 11px);
+    height: 30px;
+    left: calc(22.04% - 7px);
+    width: 30px;
+}
+
+.gm-hifi-homepage-1 .group-20-z1YPK5 {
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-51-pRNdk4 {
+    background-color: transparent;
+    height: 94px;
+    left: 631px;
+    opacity: 0.38;
+    position: absolute;
+    top: 976px;
+    width: 204px;
+}
+
+.gm-hifi-homepage-1 .group-44-fGVx1G {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-43-6WxCXc {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-46-fGVx1G {
+    background-color: transparent;
+    height: 33px;
+    position: absolute;
+    right: 4px;
+    top: calc(44.33% - 15px);
+    width: 33px;
+}
+
+.gm-hifi-homepage-1 .group-45-OIhKKD {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-48-fGVx1G {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-47-0d77kx {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-50-fGVx1G {
+    background-color: transparent;
+    bottom: calc(36.66% - 5px);
+    height: 14px;
+    position: absolute;
+    right: calc(45.79% - 6px);
+    width: 14px;
+}
+
+.gm-hifi-homepage-1 .group-49-0ySxZR {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-pRNdk4 {
+    color: var(--black);
+    font-family: var(--font-family-gotham);
+    font-size: var(--font-size-xxl);
+    font-weight: 400;
+    height: 72px;
+    left: 112px;
+    line-height: 19px;
+    text-align: center;
+    top: 970px;
+    width: 579px;
+}
+
+.gm-hifi-homepage-1 .span0-T5Sisy {
+    font-family: var(--font-family-gotham-book);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .span1-T5Sisy {
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .group-52-pRNdk4 {
+    background-color: transparent;
+    height: 34px;
+    left: 596px;
+    opacity: 0.29;
+    position: absolute;
+    top: 928px;
+    width: 76px;
+}
+
+.gm-hifi-homepage-1 .group-53-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 705px;
+    opacity: 0.42;
+    position: absolute;
+    top: 927px;
+    width: 47px;
+}
+
+.gm-hifi-homepage-1 .group-27-rj8bMX {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-54-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 65px;
+    opacity: 0.28;
+    position: absolute;
+    top: 928px;
+    width: 47px;
+}
+
+.gm-hifi-homepage-1 .group-27-Xd7wCv {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-56-pRNdk4 {
+    background-color: transparent;
+    height: 13px;
+    left: 167px;
+    opacity: 0.39;
+    position: absolute;
+    top: 949px;
+    width: 29px;
+}
+
+.gm-hifi-homepage-1 .our-mission-pRNdk4 {
+    background-color: transparent;
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    height: 53px;
+    left: 0px;
+    letter-spacing: 0.00px;
+    line-height: 19px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 928px;
+    width: 781px;
+}
+
+.gm-hifi-homepage-1 .rectangle-205-pRNdk4 {
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px #00000029;
+    height: 242px;
+    left: 48px;
+    position: absolute;
+    top: 1157px;
+    width: 159px;
+}
+
+.gm-hifi-homepage-1 .group-59-pRNdk4 {
+    background-color: transparent;
+    height: 66px;
+    left: 92px;
+    position: absolute;
+    top: 1171px;
+    width: 66px;
+}
+
+.gm-hifi-homepage-1 .group-58-Vf70rr {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-207-pRNdk4 {
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px #00000029;
+    height: 242px;
+    left: 573px;
+    position: absolute;
+    top: 1157px;
+    width: 159px;
+}
+
+.gm-hifi-homepage-1 .rectangle-208-pRNdk4 {
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px #00000029;
+    height: 242px;
+    left: 398px;
+    position: absolute;
+    top: 1157px;
+    width: 159px;
+}
+
+.gm-hifi-homepage-1 .rectangle-209-pRNdk4 {
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px #00000029;
+    height: 242px;
+    left: 223px;
+    position: absolute;
+    top: 1157px;
+    width: 159px;
+}
+
+.gm-hifi-homepage-1 .group-61-pRNdk4 {
+    background-color: transparent;
+    height: 66px;
+    left: 272px;
+    position: absolute;
+    top: 1171px;
+    width: 66px;
+}
+
+.gm-hifi-homepage-1 .group-60-cI8A6E {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-63-pRNdk4 {
+    background-color: transparent;
+    height: 66px;
+    left: 444px;
+    position: absolute;
+    top: 1171px;
+    width: 66px;
+}
+
+.gm-hifi-homepage-1 .group-62-RzxEde {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-68-pRNdk4 {
+    background-color: transparent;
+    height: 94px;
+    left: 604px;
+    position: absolute;
+    top: 1156px;
+    width: 108px;
+}
+
+.gm-hifi-homepage-1 .group-65-rjdvkI {
+    background-color: transparent;
+    height: calc(100.00% - 24px);
+    left: 0px;
+    position: absolute;
+    top: 14px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-64-YyhhR6 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-67-rjdvkI {
+    background-color: transparent;
+    height: 100%;
+    left: 4px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 13px);
+}
+
+.gm-hifi-homepage-1 .group-66-9wAxsu {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-uIC9e1 {
+    height: auto;
+    left: 60px;
+    line-height: 16px;
+    text-align: left;
+    top: 1290px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .federal-housingadministration-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 60px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1247px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-JFw0va {
+    height: auto;
+    left: 238px;
+    line-height: 16px;
+    text-align: left;
+    top: 1290px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .veteransaffairs-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 238px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1247px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-HV2ggW {
+    height: auto;
+    left: 414px;
+    line-height: 16px;
+    text-align: left;
+    top: 1290px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .huds-public-indian-housing-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 414px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1247px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-WAcec5 {
+    height: auto;
+    left: 590px;
+    line-height: 16px;
+    text-align: left;
+    top: 1290px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .usda-ruralhousing-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 590px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1247px;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .featured-programs-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 193px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1116px;
+    width: 395px;
+}
+
+.gm-hifi-homepage-1 .rectangle-210-pRNdk4 {
+    background-color: #eaeaea;
+    height: 294px;
+    left: 0px;
+    opacity: 0.66;
+    position: absolute;
+    top: 1430px;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .rectangle-211-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1494px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-212-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1494px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-71-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1504px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-cX8YfY {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-213-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1536px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-214-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1536px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-72-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1546px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-hxS62G {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-215-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1578px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-216-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1578px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-73-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1588px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-xDxOII {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-217-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1620px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-218-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1620px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-74-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1630px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-jpVf50 {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-219-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1578px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-220-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1578px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-75-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1588px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-9J7lcb {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-221-pRNdk4 {
+    background-color: var(--white);
+    height: 34px;
+    left: 25px;
+    position: absolute;
+    top: 1662px;
+    width: 371px;
+}
+
+.gm-hifi-homepage-1 .rectangle-222-pRNdk4 {
+    background-color: var(--peridot-3);
+    height: 34px;
+    left: 373px;
+    position: absolute;
+    top: 1662px;
+    width: 23px;
+}
+
+.gm-hifi-homepage-1 .group-76-pRNdk4 {
+    background-color: transparent;
+    height: 14px;
+    left: 381px;
+    position: absolute;
+    top: 1672px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .group-14-EI0gfL {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .popular-resources-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 11px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1454px;
+    width: 395px;
+}
+
+.gm-hifi-homepage-1 .latest-on-social-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 433px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1454px;
+    width: 312px;
+}
+
+.gm-hifi-homepage-1 .quick-links-pRNdk4 {
+    color: var(--mine-shaft);
+    font-family: var(--font-family-gotham);
+    font-size: 20px;
+    font-weight: 500;
+    height: 24px;
+    left: 42px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    width: 136px;
+}
+
+.gm-hifi-homepage-1 .span0-ghxO8A {
+    font-family: var(--font-family-gotham-black);
+    font-style: normal;
+    font-weight: 900;
+}
+
+.gm-hifi-homepage-1 .span1-ghxO8A {}
+
+.gm-hifi-homepage-1 .rectangle-225-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 38px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-pRNdk4 {
+    left: 97px;
+}
+
+.gm-hifi-homepage-1 .rectangle-226-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 38px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-uIC9e1 {
+    left: 97px;
+}
+
+.gm-hifi-homepage-1 .rectangle-227-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 214px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-JFw0va {
+    left: 273px;
+}
+
+.gm-hifi-homepage-1 .rectangle-228-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 214px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-HV2ggW {
+    left: 273px;
+}
+
+.gm-hifi-homepage-1 .rectangle-229-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 390px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-WAcec5 {
+    left: 449px;
+}
+
+.gm-hifi-homepage-1 .rectangle-230-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 390px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-EK311d {
+    left: 449px;
+}
+
+.gm-hifi-homepage-1 .rectangle-231-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 38px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-4ypxTa {
+    left: 97px;
+}
+
+.gm-hifi-homepage-1 .rectangle-232-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 38px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-qEIh3m {
+    left: 97px;
+}
+
+.gm-hifi-homepage-1 .rectangle-241-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 565px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-4cpWy3 {
+    left: 624px;
+}
+
+.gm-hifi-homepage-1 .rectangle-242-pRNdk4 {
+    background-color: transparent;
+    border: 3px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 39px;
+    left: 565px;
+    position: absolute;
+    top: 1788px;
+    width: 164px;
+}
+
+.gm-hifi-homepage-1 .x2-f-kspBhx {
+    left: 624px;
+}
+
+.gm-hifi-homepage-1 .rectangle-245-pRNdk4 {
+    background-color: var(--white);
+    height: 165px;
+    left: 0px;
+    position: absolute;
+    top: 1725px;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .rectangle-247-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 26px;
+    left: 38px;
+    position: absolute;
+    top: 1798px;
+    width: 88px;
+}
+
+.gm-hifi-homepage-1 .rectangle-249-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #142047;
+    border-radius: 20px;
+    height: 26px;
+    left: 297px;
+    position: absolute;
+    top: 1798px;
+    width: 90px;
+}
+
+.gm-hifi-homepage-1 .rectangle-252-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 26px;
+    left: 38px;
+    position: absolute;
+    top: 1833px;
+    width: 110px;
+}
+
+.gm-hifi-homepage-1 .path-74-pRNdk4 {
+    background-color: transparent;
+    height: 26px;
+    left: 250px;
+    object-fit: cover;
+    position: absolute;
+    top: 1833px;
+    width: 108px;
+}
+
+.gm-hifi-homepage-1 .rectangle-261-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--finn);
+    border-radius: 20px;
+    height: 26px;
+    left: 366px;
+    position: absolute;
+    top: 1833px;
+    width: 133px;
+}
+
+.gm-hifi-homepage-1 .rectangle-266-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--peridot-2);
+    border-radius: 20px;
+    height: 26px;
+    left: 133px;
+    position: absolute;
+    top: 1798px;
+    width: 158px;
+}
+
+.gm-hifi-homepage-1 .rectangle-267-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--peridot-2);
+    border-radius: 20px;
+    height: 26px;
+    left: 391px;
+    position: absolute;
+    top: 1798px;
+    width: 347px;
+}
+
+.gm-hifi-homepage-1 .rectangle-268-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--peridot-2);
+    border-radius: 20px;
+    height: 26px;
+    left: 156px;
+    position: absolute;
+    top: 1833px;
+    width: 86px;
+}
+
+.gm-hifi-homepage-1 .rectangle-269-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: var(--peridot-2);
+    border-radius: 20px;
+    height: 26px;
+    left: 509px;
+    position: absolute;
+    top: 1833px;
+    width: 110px;
+}
+
+.gm-hifi-homepage-1 .quick-links-uIC9e1 {
+    height: auto;
+    left: 194px;
+    line-height: 16px;
+    text-align: center;
+    width: 395px;
+}
+
+.gm-hifi-homepage-1 .rectangle-270-pRNdk4 {
+    background-color: transparent;
+    border: 2px solid;
+    border-color: #142047;
+    border-radius: 20px;
+    height: 26px;
+    left: 624px;
+    position: absolute;
+    top: 1834px;
+    width: 117px;
+}
+
+.gm-hifi-homepage-1 .housing-analysis-pol-pRNdk4 {
+    left: 34px;
+    top: 1504px;
+}
+
+.gm-hifi-homepage-1 .global-market-analysis-reports-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 34px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1544px;
+    white-space: nowrap;
+    width: 328px;
+}
+
+.gm-hifi-homepage-1 .newsroom-pRNdk4 {
+    height: auto;
+    left: 34px;
+    line-height: 16px;
+    top: 1588px;
+    white-space: nowrap;
+    width: 328px;
+}
+
+.gm-hifi-homepage-1 .illaborumquia-dendae-laborior-sundus-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 34px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1628px;
+    white-space: nowrap;
+    width: 328px;
+}
+
+.gm-hifi-homepage-1 .xeruntotate-plis-ari-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 34px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1670px;
+    white-space: nowrap;
+    width: 328px;
+}
+
+.gm-hifi-homepage-1 .group-90-pRNdk4 {
+    background-color: transparent;
+    height: 35px;
+    left: 7px;
+    opacity: 0.28;
+    position: absolute;
+    top: 819px;
+    width: 78px;
+}
+
+.gm-hifi-homepage-1 .group-27-fkyja0 {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .housing-analysis-pol-uIC9e1 {
+    left: 431px;
+    top: 1802px;
+}
+
+.gm-hifi-homepage-1 .markets-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 320px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1802px;
+    width: 50px;
+}
+
+.gm-hifi-homepage-1 .programs-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 64px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1836px;
+    width: 76px;
+}
+
+.gm-hifi-homepage-1 .newsroom-uIC9e1 {
+    height: 21px;
+    left: 534px;
+    line-height: 16px;
+    top: 1836px;
+    width: 76px;
+}
+
+.gm-hifi-homepage-1 .lorem-ipsum-rome-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 382px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1836px;
+    width: 115px;
+}
+
+.gm-hifi-homepage-1 .rome-lorem-ispmume-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 150px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1802px;
+    width: 133px;
+}
+
+.gm-hifi-homepage-1 .lorem-ips-pRNdk4 {
+    left: 54px;
+    top: 1802px;
+}
+
+.gm-hifi-homepage-1 .lorem-ips-uIC9e1 {
+    left: 172px;
+    top: 1836px;
+}
+
+.gm-hifi-homepage-1 .investor-tools-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 266px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1836px;
+    width: 104px;
+}
+
+.gm-hifi-homepage-1 .lorem-ipssumap-pRNdk4 {
+    background-color: transparent;
+    height: 21px;
+    left: 636px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 1836px;
+    width: 103px;
+}
+
+.gm-hifi-homepage-1 .path-75-pRNdk4 {
+    background-color: transparent;
+    height: 127px;
+    left: 438px;
+    object-fit: cover;
+    position: absolute;
+    top: 1495px;
+    width: 102px;
+}
+
+.gm-hifi-homepage-1 .path-76-pRNdk4 {
+    background-color: transparent;
+    height: 127px;
+    left: 532px;
+    object-fit: cover;
+    position: absolute;
+    top: 1495px;
+    width: 103px;
+}
+
+.gm-hifi-homepage-1 .path-77-pRNdk4 {
+    background-color: transparent;
+    height: 127px;
+    left: 626px;
+    object-fit: cover;
+    position: absolute;
+    top: 1495px;
+    width: 103px;
+}
+
+.gm-hifi-homepage-1 .group-78-pRNdk4 {
+    background-color: transparent;
+    height: 16px;
+    left: 428px;
+    position: absolute;
+    top: 1540px;
+    width: 9px;
+}
+
+.gm-hifi-homepage-1 .group-14-AJqUfS {
+    height: 100%;
+    left: 1px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-79-pRNdk4 {
+    background-color: transparent;
+    height: 16px;
+    left: 739px;
+    position: absolute;
+    top: 1540px;
+    width: 9px;
+}
+
+.gm-hifi-homepage-1 .group-14-65vJ7X {
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-EK311d {
+    height: 75px;
+    left: 462px;
+    line-height: 19px;
+    text-align: center;
+    top: 1622px;
+    width: 259px;
+}
+
+.gm-hifi-homepage-1 .rectangle-274-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--bunting);
+    height: 30px;
+    left: 584px;
+    position: absolute;
+    top: 57px;
+    width: 171px;
+}
+
+.gm-hifi-homepage-1 .ellipse-15-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--midnight-blue);
+    border-radius: 4px;
+    height: 8px;
+    left: 593px;
+    position: absolute;
+    top: 67px;
+    width: 8px;
+}
+
+.gm-hifi-homepage-1 .line-70-pRNdk4 {
+    background-color: transparent;
+    height: 5px;
+    left: 599px;
+    object-fit: cover;
+    position: absolute;
+    top: 73px;
+    width: 5px;
+}
+
+.gm-hifi-homepage-1 .adobe-stock_478291835-pRNdk4 {
+    left: 22px;
+    width: 733px;
+}
+
+.gm-hifi-homepage-1 .adobe-stock_478291835-uIC9e1 {
+    left: 386px;
+    width: 369px;
+}
+
+.gm-hifi-homepage-1 .ellipse-1-pRNdk4 {
+    background-color: var(--white);
+    border-radius: 22px;
+    height: 44px;
+    left: 31px;
+    opacity: 0.48;
+    position: absolute;
+    top: 301px;
+    width: 44px;
+}
+
+.gm-hifi-homepage-1 .ellipse-2-pRNdk4 {
+    background-color: var(--dove-gray);
+    border-radius: 6px;
+    height: 12px;
+    left: 342px;
+    opacity: 0.48;
+    position: absolute;
+    top: 463px;
+    width: 12px;
+}
+
+.gm-hifi-homepage-1 .ellipse-3-pRNdk4 {
+    background-color: var(--dove-gray);
+    border-radius: 6px;
+    height: 12px;
+    left: 361px;
+    opacity: 0.48;
+    position: absolute;
+    top: 463px;
+    width: 12px;
+}
+
+.gm-hifi-homepage-1 .ellipse-4-pRNdk4 {
+    background-color: var(--dove-gray);
+    border-radius: 6px;
+    height: 12px;
+    left: 380px;
+    opacity: 0.48;
+    position: absolute;
+    top: 463px;
+    width: 12px;
+}
+
+.gm-hifi-homepage-1 .ellipse-5-pRNdk4 {
+    background-color: var(--dove-gray);
+    border-radius: 6.5px/6px;
+    height: 12px;
+    left: 398px;
+    opacity: 0.48;
+    position: absolute;
+    top: 463px;
+    width: 13px;
+}
+
+.gm-hifi-homepage-1 .ellipse-6-pRNdk4 {
+    background-color: var(--dove-gray);
+    border-radius: 6.5px/6px;
+    height: 12px;
+    left: 417px;
+    opacity: 0.48;
+    position: absolute;
+    top: 463px;
+    width: 13px;
+}
+
+.gm-hifi-homepage-1 .group-15-pRNdk4 {
+    background-color: transparent;
+    height: 20px;
+    left: 46px;
+    position: absolute;
+    top: 313px;
+    width: 11px;
+}
+
+.gm-hifi-homepage-1 .group-14-wxRhBM {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .ellipse-8-pRNdk4 {
+    background-color: var(--white);
+    border-radius: 22px;
+    height: 44px;
+    left: 702px;
+    opacity: 0.48;
+    position: absolute;
+    top: 301px;
+    transform: rotate(180deg);
+    width: 44px;
+}
+
+.gm-hifi-homepage-1 .group-35-pRNdk4 {
+    background-color: transparent;
+    height: 20px;
+    left: 720px;
+    position: absolute;
+    top: 313px;
+    transform: rotate(180deg);
+    width: 11px;
+}
+
+.gm-hifi-homepage-1 .group-14-DAV98d {
+    height: 100%;
+    left: 0px;
+    top: 1px;
+    transform: rotate(-180deg);
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .facia-net-et-omnis-p-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 89px;
+    letter-spacing: 0.00px;
+    line-height: 15px;
+    position: absolute;
+    text-align: left;
+    top: 320px;
+    width: 223px;
+}
+
+.gm-hifi-homepage-1 .ginnie-mae-mortgage-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 89px;
+    letter-spacing: 0.00px;
+    line-height: 21px;
+    position: absolute;
+    text-align: left;
+    top: 247px;
+    width: 236px;
+}
+
+.gm-hifi-homepage-1 .rectangle-275-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--peridot);
+    border-radius: 6px;
+    height: 28px;
+    left: 87px;
+    position: absolute;
+    top: 186px;
+    width: 84px;
+}
+
+.gm-hifi-homepage-1 .news-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-medium);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+    height: auto;
+    left: 80px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 190px;
+    white-space: nowrap;
+    width: 100px;
+}
+
+.gm-hifi-homepage-1 .january-31-2025-pRNdk4 {
+    background-color: transparent;
+    color: #9b9b9b;
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    left: 89px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    top: 227px;
+    white-space: nowrap;
+    width: 137px;
+}
+
+.gm-hifi-homepage-1 .rectangle-276-pRNdk4 {
+    background-color: var(--peridot);
+    border-radius: 6px;
+    height: 31px;
+    left: 90px;
+    position: absolute;
+    top: 427px;
+    width: 124px;
+}
+
+.gm-hifi-homepage-1 .learn-more-pRNdk4 {
+    color: var(--black);
+    font-family: var(--font-family-gotham-medium);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 500;
+    left: 68px;
+    top: 434px;
+}
+
+.gm-hifi-homepage-1 .rectangle-277-pRNdk4 {
+    background-color: var(--white);
+    border-radius: 0px 0px 14px 14px;
+    box-shadow: -4px 6px 4px #00000054;
+    height: 29px;
+    left: 448px;
+    position: absolute;
+    top: 1581px;
+    width: 90px;
+}
+
+.gm-hifi-homepage-1 .rectangle-280-pRNdk4 {
+    background-color: var(--white);
+    border-radius: 0px 0px 14px 14px;
+    box-shadow: -4px 6px 4px #00000054;
+    height: 29px;
+    left: 542px;
+    position: absolute;
+    top: 1581px;
+    width: 92px;
+}
+
+.gm-hifi-homepage-1 .rectangle-281-pRNdk4 {
+    background-color: var(--white);
+    border-radius: 0px 0px 14px 14px;
+    box-shadow: -4px 6px 4px #00000054;
+    height: 29px;
+    left: 637px;
+    position: absolute;
+    top: 1581px;
+    width: 90px;
+}
+
+.gm-hifi-homepage-1 .image-33-pRNdk4 {
+    left: 511px;
+}
+
+.gm-hifi-homepage-1 .image-33-uIC9e1 {
+    left: 607px;
+}
+
+.gm-hifi-homepage-1 .image-33-JFw0va {
+    left: 701px;
+}
+
+.gm-hifi-homepage-1 .x1-week-ago-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 451px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1588px;
+    white-space: nowrap;
+    width: 58px;
+}
+
+.gm-hifi-homepage-1 .x2-weeks-ago-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 547px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1588px;
+    white-space: nowrap;
+    width: 58px;
+}
+
+.gm-hifi-homepage-1 .x3-weeks-ago-pRNdk4 {
+    background-color: transparent;
+    height: auto;
+    left: 642px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1588px;
+    white-space: nowrap;
+    width: 58px;
+}
+
+.gm-hifi-homepage-1 .image-34-pRNdk4 {
+    background-color: transparent;
+    height: 54px;
+    left: 23px;
+    object-fit: cover;
+    position: absolute;
+    top: 51px;
+    width: 219px;
+}
+
+.gm-hifi-homepage-1 .rectangle-282-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--peridot);
+    border-radius: 6px;
+    height: 31px;
+    left: 64px;
+    position: absolute;
+    top: 1353px;
+    width: 124px;
+}
+
+.gm-hifi-homepage-1 .learn-more-uIC9e1 {
+    left: 42px;
+    top: 1360px;
+}
+
+.gm-hifi-homepage-1 .rectangle-283-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--peridot);
+    border-radius: 6px;
+    height: 31px;
+    left: 239px;
+    position: absolute;
+    top: 1353px;
+    width: 124px;
+}
+
+.gm-hifi-homepage-1 .learn-more-JFw0va {
+    left: 217px;
+    top: 1360px;
+}
+
+.gm-hifi-homepage-1 .rectangle-284-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--peridot);
+    border-radius: 6px;
+    height: 31px;
+    left: 416px;
+    position: absolute;
+    top: 1353px;
+    width: 124px;
+}
+
+.gm-hifi-homepage-1 .learn-more-HV2ggW {
+    left: 394px;
+    top: 1360px;
+}
+
+.gm-hifi-homepage-1 .rectangle-285-pRNdk4 {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--peridot);
+    border-radius: 6px;
+    height: 31px;
+    left: 591px;
+    position: absolute;
+    top: 1353px;
+    width: 124px;
+}
+
+.gm-hifi-homepage-1 .learn-more-WAcec5 {
+    left: 569px;
+    top: 1360px;
+}
+
+.gm-hifi-homepage-1 .group-87-pRNdk4 {
+    background-color: transparent;
+    height: 35px;
+    left: 15px;
+    opacity: 0.11;
+    position: absolute;
+    top: 652px;
+    width: 78px;
+}
+
+.gm-hifi-homepage-1 .group-27-SBNSLg {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-88-pRNdk4 {
+    background-color: transparent;
+    height: 35px;
+    left: 694px;
+    opacity: 0.15;
+    position: absolute;
+    top: 708px;
+    width: 78px;
+}
+
+.gm-hifi-homepage-1 .group-27-R1bomz {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-85-pRNdk4 {
+    background-color: transparent;
+    height: 237px;
+    left: 66px;
+    position: absolute;
+    top: 652px;
+    width: 230px;
+}
+
+.gm-hifi-homepage-1 .group-39-M1yk9F {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-15-afLGwg {
+    background-color: var(--finn-2);
+    height: calc(100.00% - 18px);
+    top: 18px;
+}
+
+.gm-hifi-homepage-1 .polygon-1-afLGwg {
+    height: 36px;
+    right: calc(50.00% - 38px);
+    width: 76px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-M1yk9F {
+    bottom: 1px;
+    height: 84px;
+    left: 12px;
+    line-height: 18px;
+    text-align: center;
+    width: calc(100.00% - 43px);
+}
+
+.gm-hifi-homepage-1 .single-family-housing-financed-M1yk9F {
+    background-color: transparent;
+    bottom: calc(37.50% - 26px);
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    height: 69px;
+    left: 30px;
+    letter-spacing: 0.00px;
+    line-height: 14px;
+    position: absolute;
+    text-align: center;
+    width: calc(100.00% - 70px);
+}
+
+.gm-hifi-homepage-1 .x21-M1yk9F {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    height: 52px;
+    left: calc(48.62% - 24px);
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    position: absolute;
+    text-align: left;
+    top: 29px;
+    width: 49px;
+}
+
+.gm-hifi-homepage-1 .million-M1yk9F {
+    color: var(--white);
+    left: 8px;
+    top: calc(35.89% - 10px);
+    width: calc(100.00% - 27px);
+}
+
+.gm-hifi-homepage-1 .group-84-pRNdk4 {
+    background-color: transparent;
+    height: 239px;
+    left: 274px;
+    position: absolute;
+    top: 650px;
+    width: 232px;
+}
+
+.gm-hifi-homepage-1 .group-40-xqGHSl {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-15-IcaZAD {
+    background-color: var(--peridot);
+    height: calc(100.00% - 20px);
+    top: 20px;
+}
+
+.gm-hifi-homepage-1 .polygon-1-IcaZAD {
+    height: 41px;
+    left: calc(47.47% - 35px);
+    width: 74px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-xqGHSl {
+    bottom: 1px;
+    color: #151f49;
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+    height: 84px;
+    left: 14px;
+    line-height: 18px;
+    text-align: center;
+    width: calc(100.00% - 45px);
+}
+
+.gm-hifi-homepage-1 .multifamily-housingfinanced-xqGHSl {
+    background-color: transparent;
+    bottom: calc(36.47% - 25px);
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    height: 69px;
+    left: 32px;
+    letter-spacing: 0.00px;
+    line-height: 14px;
+    position: absolute;
+    text-align: center;
+    width: calc(100.00% - 72px);
+}
+
+.gm-hifi-homepage-1 .million-xqGHSl {
+    color: var(--bunting);
+    left: 11px;
+    top: calc(38.39% - 11px);
+    width: calc(100.00% - 29px);
+}
+
+.gm-hifi-homepage-1 .title-xqGHSl {
+    background-color: transparent;
+    color: var(--bunting);
+    font-family: var(--font-family-gotham-bold);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    height: 52px;
+    left: calc(50.00% - 46px);
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    position: absolute;
+    text-align: left;
+    top: 31px;
+    width: 92px;
+}
+
+.gm-hifi-homepage-1 .group-83-pRNdk4 {
+    background-color: transparent;
+    height: 241px;
+    left: 486px;
+    position: absolute;
+    top: 650px;
+    width: 227px;
+}
+
+.gm-hifi-homepage-1 .group-41-AKdiTd {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-15-RHham7 {
+    background-color: #151f49;
+    height: calc(100.00% - 20px);
+    top: 20px;
+}
+
+.gm-hifi-homepage-1 .polygon-1-RHham7 {
+    height: 41px;
+    right: calc(49.02% - 36px);
+    width: 74px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-AKdiTd {
+    bottom: 3px;
+    height: 84px;
+    left: 21px;
+    line-height: 18px;
+    text-align: center;
+    width: calc(100.00% - 40px);
+}
+
+.gm-hifi-homepage-1 .group-82-AKdiTd {
+    background-color: transparent;
+    height: 130px;
+    left: 13px;
+    position: absolute;
+    top: 32px;
+    width: calc(100.00% - 26px);
+}
+
+.gm-hifi-homepage-1 .healthcare-financed-parties-qsHxuI {
+    background-color: transparent;
+    bottom: -1px;
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xl);
+    font-style: normal;
+    font-weight: 400;
+    height: 57px;
+    left: 26px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    width: calc(100.00% - 52px);
+}
+
+.gm-hifi-homepage-1 .x493-qsHxuI {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    height: 52px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    position: absolute;
+    right: calc(48.62% - 45px);
+    text-align: left;
+    top: 0px;
+    width: 92px;
+}
+
+.gm-hifi-homepage-1 .thousand-qsHxuI {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-book);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    height: 28px;
+    left: 0px;
+    letter-spacing: 2.55px;
+    line-height: 17px;
+    position: absolute;
+    text-align: center;
+    top: calc(46.08% - 13px);
+    width: calc(100.00% + 2px);
+}
+
+.gm-hifi-homepage-1 .rectangle-287-pRNdk4 {
+    background-color: var(--finn-2);
+    border: 1px solid;
+    border-color: var(--dove-gray);
+    height: 23px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 779px;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam-4ypxTa {
+    color: var(--white);
+    font-family: var(--font-family-gotham);
+    font-size: var(--font-size-xxl);
+    font-weight: 400;
+    height: 24px;
+    left: 90px;
+    line-height: 19px;
+    text-align: center;
+    top: 0px;
+    width: 579px;
+}
+
+.gm-hifi-homepage-1 .span0-hhx7NY {
+    color: var(--black);
+    font-family: var(--font-family-gotham-book);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .span1-hhx7NY {
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-xxs);
+    font-style: normal;
+}
+
+.gm-hifi-homepage-1 .image-36-pRNdk4 {
+    background-color: transparent;
+    height: 15px;
+    left: 186px;
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    width: 15px;
+}
+
+.gm-hifi-homepage-1 .rectangle-288-pRNdk4 {
+    background-color: var(--peridot);
+    height: 18px;
+    left: 45px;
+    position: absolute;
+    top: 1978px;
+    width: 71px;
+}
+
+.gm-hifi-homepage-1 .submit-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-medium);
+    font-size: var(--font-size-xs);
+    font-style: normal;
+    font-weight: 500;
+    height: auto;
+    left: 49px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1977px;
+    white-space: nowrap;
+    width: 64px;
+}
+
+.gm-hifi-homepage-1 .group-100-pRNdk4 {
+    background-color: transparent;
+    height: 17px;
+    left: 726px;
+    position: absolute;
+    top: 375px;
+    width: 17px;
+}
+
+.gm-hifi-homepage-1 .ellipse-16-a8fj1g {
+    background-color: var(--white);
+    border-radius: 8.5px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.48;
+    position: absolute;
+    top: 0px;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .x-a8fj1g {
+    background-color: transparent;
+    color: var(--bunting);
+    font-family: var(--font-family-gotham-book);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 400;
+    height: 13px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    opacity: 0.38;
+    overflow: hidden;
+    position: absolute;
+    right: calc(16.67% - 2px);
+    text-align: left;
+    top: -2px;
+    white-space: nowrap;
+    width: 11px;
+}
+
+.gm-hifi-homepage-1 .rectangle-289-pRNdk4 {
+    background-color: var(--white);
+    border: 1px solid;
+    border-color: #b4b4b4;
+    border-radius: 10px;
+    box-shadow: -8px 6px 5px #00000059;
+    height: 86px;
+    left: 112px;
+    position: absolute;
+    top: 520px;
+    width: 560px;
+}
+
+.gm-hifi-homepage-1 .are-you-a-pRNdk4 {
+    background-color: transparent;
+    color: var(--bunting);
+    font-family: var(--font-family-gotham-bold);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 63px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 532px;
+    width: 657px;
+}
+
+.gm-hifi-homepage-1 .rectangle-291-pRNdk4 {
+    background-color: var(--finn-2);
+    border: 1px solid;
+    border-color: #c4c5c1;
+    border-radius: 5px;
+    height: 35px;
+    left: 120px;
+    position: absolute;
+    top: 562px;
+    width: 257px;
+}
+
+.gm-hifi-homepage-1 .public-visitor-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 89px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 570px;
+    white-space: nowrap;
+    width: 318px;
+}
+
+.gm-hifi-homepage-1 .rectangle-300-pRNdk4 {
+    background-color: var(--bunting);
+    border: 1px solid;
+    border-color: #b4b4b4;
+    border-radius: 5px;
+    height: 35px;
+    left: 405px;
+    position: absolute;
+    top: 562px;
+    width: 257px;
+}
+
+.gm-hifi-homepage-1 .program-participant-pRNdk4 {
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family-gotham-bold);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+    height: auto;
+    left: 375px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 570px;
+    white-space: nowrap;
+    width: 318px;
+}
+
+.gm-hifi-homepage-1 .group-91-pRNdk4 {
+    background-color: transparent;
+    height: 35px;
+    left: 455px;
+    opacity: 0.16;
+    position: absolute;
+    top: 614px;
+    width: 78px;
+}
+
+.gm-hifi-homepage-1 .group-27-lr6beM {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-94-pRNdk4 {
+    background-color: transparent;
+    height: 24px;
+    left: 212px;
+    opacity: 0.51;
+    position: absolute;
+    top: 620px;
+    width: 54px;
+}
+
+.gm-hifi-homepage-1 .group-93-hS2TZd {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    opacity: 0.28;
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-27-IucHHn {
+    left: 0px;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .group-95-pRNdk4 {
+    background-color: transparent;
+    height: 13px;
+    left: 725px;
+    opacity: 0.28;
+    position: absolute;
+    top: 819px;
+    width: 30px;
+}
+
+.gm-hifi-homepage-1 .group-27-HTuspy {
+    left: 0px;
+    top: 1px;
+}
+
+.gm-hifi-homepage-1 .group-96-pRNdk4 {
+    background-color: transparent;
+    height: 13px;
+    left: 709px;
+    opacity: 0.11;
+    position: absolute;
+    top: 639px;
+    width: 30px;
+}
+
+.gm-hifi-homepage-1 .group-27-ekeGCC {
+    left: 0px;
+    top: 1px;
+}
+
+.gm-hifi-homepage-1 .group-97-pRNdk4 {
+    background-color: transparent;
+    height: 9px;
+    left: 294px;
+    position: absolute;
+    top: 575px;
+    width: 9px;
+}
+
+.gm-hifi-homepage-1 .rectangle-301-SKzsta {
+    background-color: var(--white);
+}
+
+.gm-hifi-homepage-1 .rectangle-302-SKzsta {
+    background-color: var(--white);
+}
+
+.gm-hifi-homepage-1 .group-98-pRNdk4 {
+    background-color: transparent;
+    height: 9px;
+    left: 603px;
+    position: absolute;
+    top: 575px;
+    width: 9px;
+}
+
+.gm-hifi-homepage-1 .rectangle-301-u2d8dR {
+    background-color: var(--bunting);
+}
+
+.gm-hifi-homepage-1 .rectangle-302-u2d8dR {
+    background-color: var(--bunting);
+}
+
+.gm-hifi-homepage-1 .adobe-stock_478291835 {
+    background-color: transparent;
+    height: 326px;
+    object-fit: cover;
+    position: absolute;
+    top: 161px;
+}
+
+.gm-hifi-homepage-1 .ellipse-17 {
+    background-color: var(--white);
+    border-radius: 4.5px;
+    height: 100%;
+    left: 0px;
+    opacity: 0.48;
+    position: absolute;
+    top: 0px;
+    transform: rotate(180deg);
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-14 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+}
+
+.gm-hifi-homepage-1 .group-18 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-19 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-20 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-21 {
+    background-color: transparent;
+    position: absolute;
+}
+
+.gm-hifi-homepage-1 .group-22 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-23 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-25 {
+    background-color: transparent;
+    height: 100%;
+    left: 1px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .group-27 {
+    background-color: transparent;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .housing-analysis-pol {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    white-space: nowrap;
+    width: 328px;
+}
+
+.gm-hifi-homepage-1 .image-33 {
+    background-color: transparent;
+    height: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 1585px;
+    width: 22px;
+}
+
+.gm-hifi-homepage-1 .learn-more {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    width: 172px;
+}
+
+.gm-hifi-homepage-1 .lorem-ips {
+    background-color: transparent;
+    height: 21px;
+    letter-spacing: 0.00px;
+    line-height: 16px;
+    position: absolute;
+    text-align: left;
+    width: 57px;
+}
+
+.gm-hifi-homepage-1 .million {
+    background-color: transparent;
+    font-family: var(--font-family-gotham-book);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    height: 28px;
+    letter-spacing: 4.25px;
+    line-height: 17px;
+    position: absolute;
+    text-align: center;
+}
+
+.gm-hifi-homepage-1 .namus-idessit-cusam {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    position: absolute;
+}
+
+.gm-hifi-homepage-1 .newsroom {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    position: absolute;
+    text-align: left;
+}
+
+.gm-hifi-homepage-1 .polygon-1 {
+    background-color: transparent;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+}
+
+.gm-hifi-homepage-1 .quick-links {
+    background-color: transparent;
+    letter-spacing: 0.00px;
+    position: absolute;
+    top: 1752px;
+}
+
+.gm-hifi-homepage-1 .rectangle-15 {
+    border-radius: 16px;
+    box-shadow: -6px 4px 6px #0000006e;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.gm-hifi-homepage-1 .rectangle-301 {
+    bottom: calc(33.33% - 1px);
+    height: 3px;
+    left: 50.00%;
+    position: absolute;
+    width: 1px;
+}
+
+.gm-hifi-homepage-1 .rectangle-302 {
+    height: 1px;
+    left: 50.00%;
+    position: absolute;
+    top: 25.00%;
+    width: 1px;
+}
+
+.gm-hifi-homepage-1 .x2-f {
+    background-color: transparent;
+    height: auto;
+    letter-spacing: 0.00px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 1796px;
+    width: 48px;
+}

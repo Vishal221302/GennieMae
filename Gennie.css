@@ -497,7 +497,7 @@
      color: white;
      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
      position: relative;
-     height: 327px;
+     height: 250px;
  }
 
  .card::before {
@@ -527,7 +527,7 @@
  }
 
  .card span {
-     font-size: 28px;
+     font-size: 23px;
      letter-spacing: 2px;
      display: block;
      margin-bottom: 20px;
@@ -537,11 +537,11 @@
  .card strong{
     font-family: "Gotham-Book",
             Helvetica;
-            font-size: 22px;
+            font-size: 18px;
  }
 
  .card p {
-font-size: 17px;
+font-size: 16px;
     line-height: 1.6;
     font-family: "Gotham-Book", Helvetica;
     font-weight: 400;
@@ -592,7 +592,7 @@ font-size: 17px;
  }
 
  .mission-section h2 {
-     font-size: 38px;
+     font-size: 40px;
      margin-bottom: 15px;
      font-family: "Gotham-Book",
         Helvetica;
@@ -601,7 +601,7 @@ font-size: 17px;
  }
 
  .mission-section p {
-     font-size: 20px;
+     font-size: 17px;
      line-height: 1.8;
      color: #000000;
      font-family: "Gotham-Book",
@@ -654,8 +654,7 @@ font-size: 17px;
 
  .program-card {
      background-color: #fff;
-     border-radius: 8px;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 6px #00000029;
      padding: 25px 20px;
      width: 155px;
      display: flex;
@@ -768,7 +767,7 @@ font-size: 17px;
 
  /* POPULAR RESOURCES */
  .resources {
-     background: white;
+    
      margin-bottom: 30px;
      
  }
@@ -777,7 +776,7 @@ font-size: 17px;
      display: flex;
      justify-content: space-between;
      align-items: center;
-     padding: 12px 16px;
+     /* padding: 12px 16px; */
      border-bottom: 1px solid #eee;
      font-size: 15px;
      cursor: pointer;
@@ -785,6 +784,9 @@ font-size: 17px;
      font-family: "Gotham-Book",
         Helvetica;
         font-weight: 400;
+        background: white;
+        margin: 5px 0px;
+    padding-left: 10px;
  }
 
  .resource-item:last-child {
@@ -799,10 +801,16 @@ font-size: 17px;
      background: #a5b52f;
      color: white;
      font-weight: bold;
-     padding: 5px 10px;
-     border-radius: 2px;
+    padding: 10px 5px;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+     /* border-radius: 2px; */
  }
+.resource-item span.arrow img{
+    width: 75%;
 
+}
 
  .resource-content {
      display: none;
@@ -899,11 +907,13 @@ font-size: 17px;
      padding: 10px;
      cursor: pointer;
  }
- #custom-prev{
-    margin-left: -11px;
+ #custom-prev img{
+    width: 76%;
+    width: 12px;
  }
- #custom-next{
+ #custom-next img{
     margin-right: -11px;
+        width: 12px;
  }
 
  .social-description {
@@ -926,7 +936,7 @@ font-size: 17px;
                 box-shadow: -4px 6px 4px #00000054;
  }
  .bottom_silder_item img{
-    width: 25px;
+    width: 20px;
 
     
  }
