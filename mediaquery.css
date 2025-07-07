@@ -1,0 +1,228 @@
+
+
+/* mobile  */
+@media (max-width:320px){
+        .slide-left {
+                padding: 34px 0px !important;
+                padding-left: 10px !important;
+            }
+            .slide-left p{
+                font-size: 10px;
+            }
+            .header-main{
+                padding: 0px;
+            }
+            .logo img {
+            height: 61px;
+        }
+        .left-column,
+        .right-column{
+            min-width: 240px;
+        }
+        .section-title{
+            font-size: 20px;
+            text-align: center;
+        }
+        .resource-item {
+        font-size: 10px !important;
+    }
+        .bottom_silder_item img {
+            width: 15px;
+        }
+        .bottom_silder_item p{
+            font-size: 7px;
+        }
+        .quick-link{
+            font-size: 10px;
+        }
+        .programs-section h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.footer-note {
+    bottom: 4px !important;
+    font-size: 11px;
+}
+}
+
+@media (max-width:480px){
+    body{
+        width: 100%;
+    }
+        .footer-note {
+            bottom: 4px !important;
+            font-size: 11px;
+        }
+
+    .footer-container{
+        gap:0px;
+        flex-direction: column  !important;
+    }
+    .first_section {
+            margin-left: 0px;
+        }
+                .slide-left h2,.slide-left p{
+            width: 93%;
+        }
+    
+}
+@media (max-width:780px) {
+    body {
+        width: 100%;
+    }
+    .footer-container {
+        gap: 0px;
+        flex-direction: row;
+    }
+        .footer-column{
+            margin-bottom: 10px;
+        }
+        .programs-section{
+            text-align: left;
+        }
+              .slide-left h2,.slide-left p{
+            width: 93%;
+        }
+}
+/*------------------------------------------------------- menu css-------------------------------------------- */
+/* Hide on Desktop */
+@media (max-width: 1024px) {
+    .main-menu{
+        display: none;
+    }
+    .desktop-search {
+            display: none;
+        }
+.menu-toggle {
+        display: block;
+        font-size: 28px;
+        padding: 10px 20px;
+        color: #0d204a;
+        cursor: pointer;
+    }
+
+    .mobile-nav {
+        display: none;
+        background: #fff;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .mobile-search {
+        margin-bottom: 15px;
+    }
+
+    .mobile-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-list li {
+        margin-bottom: 10px;
+    }
+
+    .mobile-nav-list span {
+        display: block;
+        font-weight: bold;
+        color: #0d204a;
+        cursor: pointer;
+    }
+
+    .submenu {
+        list-style: none;
+        padding-left: 15px;
+        display: none;
+        margin-top: 5px;
+    }
+
+    .submenu li {
+        padding: 4px 0;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .submenu.active {
+        display: block;
+    }
+/* ------------------------slider css------------------------------ */
+
+.slide-left{
+    padding: 40px 15px;
+}
+.slide-left h2{
+    font-size: 14px;
+}
+.selector-buttons{
+    gap: 25px;
+}
+.selector-buttons button{
+    font-size: 14px;
+}
+.cards-container{
+    display: block;
+}
+
+/* --------------------------------card css------------------------ */
+.card.two,.card.three{
+    margin-left: 0px;
+}
+.card.one,.card.two,
+.card.three{
+    margin: auto;
+}
+/* ----------------------feature and program-------------------- */
+
+.programs-grid{
+    justify-content: center;
+}
+
+/* ------------------------popular resources--------------------------- */
+
+.left-column,
+.right-column{
+    max-width: 100%;
+}
+
+/* ------------------custom slider: --------------------------; */
+
+        .custom-slide{
+            flex:0 0 33%;
+        }
+        .social-description{
+            padding: 0 0px;
+        }
+        .programs-section{
+            padding: 0 0px;
+        }
+        .resource-item{
+            font-size: 13px;
+        }
+
+        /* --------------------------------footer-------------------------- */
+                .footer-links li{
+                    font-size: 10px;
+                }
+                .footer-note{
+                        bottom: 27px;
+                }
+                .footer{
+                    height: 100%;
+                    padding: 18px 29px;
+                }
+                .footer h4{
+                    bottom: -20px;
+                    font-size: 10px;
+                }
+                
+                
+                
+                
+
+
+}

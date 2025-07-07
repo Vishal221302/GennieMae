@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ginnie Mae </title>
+ <link rel="stylesheet" href="Gennie.css">
+ <link rel="stylesheet" href="mediaquery.css">
+</head>
+<body>
+
+  <!-- Top Alert Bar -->
+  <div class="top-alert">
+    Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis cum volo et ut
+  </div>
+
+  <!-- Header Main -->
+  <div class="header-main">
+    <div class="logo">
+      <img src="./GennieMaeimages/image-34@1x.png" alt="Ginnie Mae Logo">
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+  <div class="menu-toggle" onclick="toggleMobileNav()">&#9776;</div>
+
+    <div class="search-box desktop-search">
+      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#0d204a" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M20.5,6c-7.99037,0 -14.5,6.50964 -14.5,14.5c0,7.99036 6.50963,14.5 14.5,14.5c3.45636,0 6.63371,-1.22096 9.12891,-3.25l9.81055,9.81055c0.37623,0.39185 0.9349,0.54969 1.46055,0.41265c0.52565,-0.13704 0.93616,-0.54754 1.07319,-1.07319c0.13704,-0.52565 -0.0208,-1.08432 -0.41265,-1.46055l-9.81055,-9.81055c2.02904,-2.4952 3.25,-5.67255 3.25,-9.12891c0,-7.99036 -6.50963,-14.5 -14.5,-14.5zM20.5,9c6.36905,0 11.5,5.13096 11.5,11.5c0,3.10261 -1.2238,5.90572 -3.20898,7.9707c-0.12237,0.08994 -0.23037,0.19794 -0.32031,0.32031c-2.06499,1.98518 -4.86809,3.20898 -7.9707,3.20898c-6.36905,0 -11.5,-5.13096 -11.5,-11.5c0,-6.36904 5.13095,-11.5 11.5,-11.5z"></path></g></g>
+      </svg>
+    <input type="text"  class="seach_input" >
+    </div>
+    
+  </div>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav" id="mobileNav">
+  <!-- Search Box -->
+  <div class="search-box mobile-search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0,0,256,256">
+      <g fill="#0d204a"><g transform="scale(5.33333,5.33333)"><path d="M20.5,6..."></path></g></g>
+    </svg>
+    <input type="text" class="seach_input" placeholder="Search...">
+  </div>
+
+  <!-- Mobile Menu Links -->
+  <ul class="mobile-nav-list">
+    <li>
+      <span onclick="toggleSubmenu(this)">INVESTORS</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+    <li>
+      <span onclick="toggleSubmenu(this)">ISSUERS</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+    <li>
+      <span onclick="toggleSubmenu(this)">DISCLOSURE</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+    <li>
+      <span onclick="toggleSubmenu(this)">PARTICIPATE</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+    <li>
+      <span onclick="toggleSubmenu(this)">NEWSROOM</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+    <li>
+      <span onclick="toggleSubmenu(this)">ABOUT US</span>
+      <ul class="submenu">
+        <li>One</li><li>Two</li><li>Three</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+  <!-- Navigation desktop -->
+ <nav>
+  <ul class="main-menu">
+    <li class="has-submenu">
+      <a class="front_menu" href="#">INVESTORS</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a class="front_menu" href="#">ISSUERS</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a class="front_menu" href="#">DISCLOSURE</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a class="front_menu" href="#">PARTICIPATE</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a class="front_menu" href="#">NEWSROOM</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+    <li class="has-submenu">
+      <a class="front_menu" href="#">ABOUT US</a>
+      <ul class="submenu">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="slider-container">
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <div class="slide-left">
+      <div class="tag">NEWS</div>
+      <div class="date">January 31, 2025</div>
+      <h2>Ginnie Mae Mortgage-Backed Securities Portfolio Reached $2.68 Trillion in November</h2>
+      <p>Facia net et omnis plaboresci nonsequo comnisimpos volorrorrum. Itatin nemposs edicia velesciende mi, que es et everorp orrum, odis que re num soles dem que eiciis doluptaturia qui unt volorum eaquasperum lacerchit que nonecto et atem rate endus</p>
+      <button>Learn More</button>
+    </div>
+    <div class="slide-right">
+      <img src="./GennieMaeimages/sliderimages.png" alt="Slide 1" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=\'fallback-text\'>No slider image</div>')" />
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <div class="slide-left">
+      <div class="tag">UPDATE</div>
+      <div class="date">February 10, 2025</div>
+      <h2>Annual Reports Released for 2024</h2>
+      <p>Sample text for slide 2.</p>
+      <button>Read More</button>
+    </div>
+    <div class="slide-right">
+      <img src="./GennieMaeimages/sliderimages.png" alt="Slide 2" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=\'fallback-text\'>No slider image</div>')" />
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <div class="slide-left">
+      <div class="tag">REPORT</div>
+      <div class="date">March 5, 2025</div>
+      <h2>Government Loan Report Now Available</h2>
+      <p>Sample text for slide 3.</p>
+      <button>Explore</button>
+    </div>
+    <div class="slide-right">
+      <img src="./GennieMaeimages/sliderimages.png" alt="Slide 3" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<div class=\'fallback-text\'>No slider image</div>')" />
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-arrow prev">❮</div>
+  <div class="nav-arrow next">❯</div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+
+
+  <section class="info-section">
+  <!-- Are You A -->
+  <div class="selector-box">
+    <h3>Are you a...</h3>
+    <div class="selector-buttons">
+      <button class="visitor-btn">Public Visitor</button>
+      <button class="participant-btn">Program Participant</button>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards-container">
+    <div class="card one">
+      <h2>21</h2>
+      <span>MILLION</span>
+      <strong style="padding-right: 30px;">Single Family Housing Financed</strong>
+      <p style="padding-right: 50px;">Namus, idessit, cusam aciis necabori aciis ressitat ut dolorem. Denis cum volo et ut volore pelenim porione con pa.</p>
+    </div>
+
+    <div class="card two">
+      <h2>1.32</h2>
+      <span>MILLION</span>
+      <strong style="padding-right: 30px;">Multifamily Housing Financed</strong>
+      <p style="padding-right: 50px;">Namus, idessit, cusam aciis necabori aciis ressitat ut dolorem. Denis cum volo et ut volore pelenim porione con pa.</p>
+    </div>
+
+    <div class="card three">
+      <h2>493</h2>
+      <span>THOUSAND</span>
+      <strong>Healthcare Financed Parties</strong>
+      <p>Namus, idessit, cusam aciis necabori aciis ressitat ut dolorem. Denis cum volo et ut volore pelenim porione con pa.</p>
+    </div>
+  </div>
+
+  <!-- Mission Statement -->
+  <div class="mission-section">
+    <h2>Our Mission</h2>
+    <p>
+      Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis cum volo et ut volore pelenim porione conpa ducienet ea solutione sequam restor am qui odis dipiend aesciet am ne a in et omnihic ienihtiatio.
+    </p>
+  </div>
+</section>
+
+
+
+<section class="programs-section feature_pro" >
+  <h2>Featured Programs</h2>
+  <div class="programs-grid">
+
+    <div class="program-card">
+      <div class="icon-circle icon fha">
+        <!-- Add icon image or SVG here -->
+        <img src="./GennieMaeimages/bankicons.png" alt="FHA" width="60">
+      </div>
+      <div class="program-title">Federal Housing Administration</div>
+      <div class="program-description">Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis et.</div>
+      <a href="#" class="learn-more">LEARN MORE</a>
+    </div>
+
+    <div class="program-card">
+      <div class="icon-circle icon va">
+        <img src="./GennieMaeimages/flagIcons.png" alt="VA" width="60">
+      </div>
+      <div class="program-title">Veterans Affairs</div>
+      <div class="program-description">Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis et.</div>
+      <a href="#" class="learn-more">LEARN MORE</a>
+    </div>
+
+    <div class="program-card">
+      <div class="icon-circle icon hud">
+        <img src="./GennieMaeimages/homeicon.png" alt="HUD" width="60">
+      </div>
+      <div class="program-title">HUD’s Public & Indian Housing</div>
+      <div class="program-description">Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis et.</div>
+      <a href="#" class="learn-more">LEARN MORE</a>
+    </div>
+
+    <div class="program-card">
+      <div class="icon-circle icon usda">
+        <img src="./GennieMaeimages/wayicons.png" alt="USDA" width="60">
+      </div>
+      <div class="program-title">USDA Rural Housing</div>
+      <div class="program-description">Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis et.</div>
+      <a href="#" class="learn-more">LEARN MORE</a>
+    </div>
+
+  </div>
+
+
+
+  <div class="section-wrapper">
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
+    <div class="section-title">Popular Resources</div>
+    <div class="resources">
+  <div class="resource-item">Housing Analysis & Policy Spotlight (HAPS) Blog <span class="arrow">›</span></div>
+  <div class="resource-content">Content for HAPS Blog...</div>
+
+  <div class="resource-item">Global Market Analysis Reports <span class="arrow">›</span></div>
+  <div class="resource-content">Content for Global Market Analysis...</div>
+
+  <div class="resource-item">Newsroom <span class="arrow">›</span></div>
+  <div class="resource-content">Newsroom content...</div>
+
+  <div class="resource-item">Illaborumquia dendae laborior sundus <span class="arrow">›</span></div>
+  <div class="resource-content">Details for Illaborumquia...</div>
+
+  <div class="resource-item">Xeruntotate plis ariberc illabor eribus aut officiiltia <span class="arrow">›</span></div>
+  <div class="resource-content">Details for Xeruntotate...</div>
+</div>
+
+  <!-- RIGHT COLUMN -->
+ </div>
+  <div class="right-column">
+    <div class="section-title">Latest on Social</div>
+    <div class="custom-slider-box">
+      <div class="custom-slider-wrapper">
+        <div class="custom-slides">
+          <div class="custom-slide">
+            <img src="./GennieMaeimages/smimage_1.png" alt="Slide 1">
+            <div class="bottom_silder_item">
+              <p>1 week ago</p>
+              <img  src="./GennieMaeimages/in.png" alt="">
+            </div>
+          </div>
+          <div class="custom-slide">
+            <img src="./GennieMaeimages/smimages_2.png" alt="Slide 2">
+            <div class="bottom_silder_item">
+              <p>1 week ago</p>
+              <img  src="./GennieMaeimages/in.png" alt="">
+            </div>
+          </div>
+          <div class="custom-slide">
+            <img src="./GennieMaeimages/smimage_3.png" alt="Slide 3">
+            <div class="bottom_silder_item">
+              <p>1 week ago</p>
+              <img  src="./GennieMaeimages/in.png" alt="">
+            </div>
+          </div>
+          <div class="custom-slide">
+            <img src="./GennieMaeimages/smimage_1.png" alt="Slide 4">
+            <div class="bottom_silder_item">
+              <p>1 week ago</p>
+              <img  src="./GennieMaeimages/in.png" alt="">
+            </div>
+          </div>
+          <div class="custom-slide">
+            <img src="./GennieMaeimages/smimages_2.png" alt="Slide 5">
+            <div class="bottom_silder_item">
+              <p>1 week ago</p>
+              <img  src="./GennieMaeimages/in.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="custom-slider-nav">
+          <button id="custom-prev">&#10094;</button>
+          <button id="custom-next">&#10095;</button>
+        </div>
+      </div>
+      <div class="social-description">
+        Namus, idessit, cusam necabori aciis ressitat ut dolorem. Denis cum volo et ut volore pelenim porione conpa ducienet. cusam necabori aciis ressitat ut dolorem
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="quick-links-section">
+    <h2>Quick Links</h2>
+    <div class="quick-links">
+      <a href="#" style="width: 89px; height: 10px;" class="quick-link color-purple">Lorem Ips</a>
+      <a href="#" style="width: 162px; height: 10px;" class="quick-link color-green">Rome Lorem Ispmume</a>
+      <a href="#" style="width: 71px; height: 10px;" class="quick-link color-navy">Markets</a>
+      <a href="#" style="width: 371px; height: 10px;" class="quick-link color-green">Housing Analysis &amp; Policy Spotlight (HAPS) Blog</a>
+    </div>
+        <div class="quick-links">
+      <a href="#" style="width:110px; height: 10px;" class="quick-link color-purple">Programs</a>
+      <a href="#"  style="width:67px; height: 10px;" class="quick-link color-green">Lorem Ips</a>
+      <a href="#" style="width: 108px; height: 10px;" class="quick-link color-navy">Investor Tools</a>
+      <a href="#"  style="width: 126px; height: 10px;"class="quick-link color-purple">Lorem ipsum rome</a>
+      <a href="#" style="width: 78px; height: 10px;" class="quick-link color-green">Newsroom</a>
+      <a href="#" style="width: 107px; height: 10px;" class="quick-link color-navy">Lorem Ipssumap</a>
+    </div>
+  </div>
+  
+
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Newsletter -->
+    <div class="footer-column" style="text-align:left;">
+      <h4>Subscribe to Our Newsletter</h4>
+      <form>
+        <input type="email" placeholder="Enter Your Email" required>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <p style="font-size: 11px;">Already a subscriber? Login to update your preferences <a href="#" style="color: #fff; text-decoration: underline;">here</a>.</p>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-column" >
+      <ul class="footer-links first_section">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Glossary</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <ul class="footer-links second_section">
+        <li><a href="#">Site Policies Disclaimer</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Government Acts & Directives</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-column">
+      <h5 class="last_heading">GET <span>CONNECTED</span></h5>
+      <img src="./GennieMaeimages/socialIcons.png" style="width:63%;">
+      <!-- <div class="social-icons">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div> -->
+    </div>
+
+  </div>
+
+  <div class="footer-note">
+    Copyright © 2025 Ginnie Mae. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+   const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    let index = currentIndex - 1;
+    if (index < 0) index = slides.length - 1;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    let index = (currentIndex + 1) % slides.length;
+    showSlide(index);
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
+
+ const resourceItems = document.querySelectorAll('.resource-item');
+
+  resourceItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Close all other items (optional: remove this loop if you want multiple open)
+      resourceItems.forEach(i => {
+        if (i !== item) i.classList.remove('active');
+        const content = i.nextElementSibling;
+        if (content && content.classList.contains('resource-content') && i !== item) {
+          content.style.display = 'none';
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('active');
+      const content = item.nextElementSibling;
+      if (content && content.classList.contains('resource-content')) {
+        content.style.display = item.classList.contains('active') ? 'block' : 'none';
+      }
+    });
+  });
+
+  // Custom Slider Script
+const customSlides = document.querySelector('.custom-slides');
+  const slideItems = document.querySelectorAll('.custom-slide');
+  const visibleSlides = 3;
+  const totalCustomSlides = slideItems.length;
+  let customCurrentIndex = 0;
+
+  document.getElementById('custom-next').addEventListener('click', () => {
+    if (customCurrentIndex < totalCustomSlides - visibleSlides) {
+      customCurrentIndex++;
+      customSlides.style.transform = `translateX(-${customCurrentIndex * (100 / visibleSlides)}%)`;
+    }
+  });
+
+  document.getElementById('custom-prev').addEventListener('click', () => {
+    if (customCurrentIndex > 0) {
+      customCurrentIndex--;
+      customSlides.style.transform = `translateX(-${customCurrentIndex * (100 / visibleSlides)}%)`;
+    }
+  });
+  
+
+  function toggleMobileNav() {
+    document.getElementById("mobileNav").classList.toggle("active");
+  }
+
+  function toggleSubmenu(element) {
+    const submenu = element.nextElementSibling;
+    submenu.classList.toggle("active");
+  }
+</script>
+</body>
+</html>
