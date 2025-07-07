@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
      font-family: 'MyFont';
-     src: url('./Gotham-Font-1/Gotham-Light.otf') format('truetype');
+     src: url('Gotham-Font-1/Gotham-Light.otf') format('truetype');
      /* You can add woff/woff2/otf formats for broader support */
      font-weight: normal;
      font-style: normal;
@@ -12,28 +12,28 @@
      font-family: "Gotham-Book";
      font-style: normal;
      font-weight: 400;
-     src: url('./Gotham-Font-1/gotham-book.otf') format("truetype");
+     src: url('Gotham-Font-1/gotham-book.otf') format("truetype");
  }
 
  @font-face {
      font-family: "Gotham-Bold";
      font-style: normal;
      font-weight: 700;
-     src: url('./Gotham-Font-1/gotham-bold.otf') format("opentype");
+     src: url('Gotham-Font-1/gotham-bold.otf') format("opentype");
  }
 
  @font-face {
      font-family: "Gotham-Medium";
      font-style: normal;
      font-weight: 500;
-     src: url('./Gotham-Font-1/gotham-medium.otf') format("opentype");
+     src: url('Gotham-Font-1/gotham-medium.otf') format("opentype");
  }
 
  @font-face {
      font-family: "Gotham-Black";
      font-style: normal;
      font-weight: 900;
-     src: url('./Gotham-Font-1/Gotham-Black.otf') format("opentype");
+     src: url('Gotham-Font-1/Gotham-Black.otf') format("opentype");
  }
 
  body {
@@ -412,6 +412,15 @@
          width: 100%;
          height: auto;
      }
+ }
+
+
+ .info-icon {
+     font-size: 12px;
+     margin-left: 6px;
+     color: #c0c0c0;
+     /* Light gray like your image */
+     vertical-align: middle;
  }
 
 
