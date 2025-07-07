@@ -1,7 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
      font-family: 'MyFont';
-     src: url('./GothamFont1/Gotham-Light.otf') format('truetype');
+     src: url('./GothamFont1/Gotham-Light.otf') format('opentype');
      /* You can add woff/woff2/otf formats for broader support */
      font-weight: normal;
      font-style: normal;
@@ -12,7 +12,7 @@
      font-family: "Gotham-Book";
      font-style: normal;
      font-weight: 400;
-     src: url('./GothamFont1/gotham-book.otf') format("truetype");
+     src: url('./GothamFont1/gotham-book.otf') format("opentype");
  }
 
  @font-face {
