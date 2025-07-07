@@ -1,6 +1,7 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @font-face {
      font-family: 'MyFont';
-     src: url('/Gotham-Font-1/Gotham-Light.otf') format('truetype');
+     src: url('./GothamFont1/Gotham-Light.otf') format('truetype');
      /* You can add woff/woff2/otf formats for broader support */
      font-weight: normal;
      font-style: normal;
@@ -11,28 +12,28 @@
      font-family: "Gotham-Book";
      font-style: normal;
      font-weight: 400;
-     src: url('/Gotham-Font-1/gotham-book.otf') format("truetype");
+     src: url('./GothamFont1/gotham-book.otf') format("truetype");
  }
 
  @font-face {
      font-family: "Gotham-Bold";
      font-style: normal;
      font-weight: 700;
-     src: url('/Gotham-Font-1/gotham-bold.otf') format("opentype");
+     src: url('./GothamFont1/gotham-bold.otf') format("opentype");
  }
 
  @font-face {
      font-family: "Gotham-Medium";
      font-style: normal;
      font-weight: 500;
-     src: url('/Gotham-Font-1/gotham-medium.otf') format("opentype");
+     src: url('./GothamFont1/gotham-medium.otf') format("opentype");
  }
 
  @font-face {
      font-family: "Gotham-Black";
      font-style: normal;
      font-weight: 900;
-     src: url('/Gotham-Font-1/Gotham-Black.otf') format("opentype");
+     src: url('./GothamFont1/Gotham-Black.otf') format("opentype");
  }
 
  body {
@@ -899,12 +900,20 @@ font-size: 16px;
  }
 
  .custom-slider-nav {
-     position: absolute;
+     /* position: absolute;
      top: 50%;
      width: 100%;
      display: flex;
      justify-content: space-between;
-     transform: translateY(-50%);
+     transform: translateY(-50%); */
+
+        position: absolute;
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            margin-top: -6%;
+            margin-left: -2%;
  }
 
  .custom-slider-nav button {
